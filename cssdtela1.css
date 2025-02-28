@@ -1,0 +1,379 @@
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/2.5.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* inicio */
+
+#menu_topo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#icone_izer, .icone{
+background-color: rgb(208, 230, 255);
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30px;
+padding: 20px;
+}
+
+#secao1{
+     display: flex;
+     text-align: left;
+     width: 80%;
+     margin: auto;
+
+}
+
+#secao2{
+    
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* fim */
+
+
+
+/* inicio */
+
+
+#header1 h1 {
+    font-size: 3vw;
+    color: #333;
+}
+
+#header1 h1 span {
+    color: #007bff;
+    font-weight: bold;
+}
+
+#header1 p {
+   color: #555;
+}
+
+#header1  .link {
+    display: inline-block;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.link {
+    color: #007bff;
+}
+
+
+#destinos{
+    margin-left: 3rem;
+    justify-content: space-around;
+}
+
+/* fim */
+
+
+
+
+
+/* inicio */
+
+#destinos h1{
+    color: var(--Texto_escuro);
+    font-size: 2.5rem;
+}
+
+#noronha{
+    width: 17rem;
+    height: 24rem;
+    z-index: 10;
+    border-radius: 1rem;
+    background-image: url(imagens/destino1.png);
+    background-size: cover;
+    display: flex;
+    margin-right: 4rem;
+}
+
+#atlas{
+    width: 17rem;
+    height: 24rem;
+    z-index: 10;
+    border-radius: 1rem;
+    background-image: url(imagens/destino2.png);
+    background-size: cover;
+    display: flex;
+    margin-right: 4rem;
+}
+
+#paraiso{
+    width: 17rem;
+    height: 24rem;
+    z-index: 10;
+    border-radius: 1rem;
+    background-image: url(imagens/destino5.png);
+    background-size: cover;
+    display: flex;
+    margin-right: 4rem;
+}
+
+#holanda{
+    width: 17rem;
+    height: 24rem;
+    z-index: 10;
+    border-radius: 1rem;
+    background-image: url(imagens/destino4.png);
+    background-size: cover;
+    display: flex;
+    margin-right: 4rem;
+}
+
+#seq-img{
+    margin-left: 3rem;
+    margin-top: 3rem;
+    justify-content: center;
+    display: flex;
+}
+/* fim */
+
+
+
+/* inicio */
+
+.azul{ 
+    color: rgb(0, 4, 218);
+    text-align: center
+}
+
+.vantagens{
+
+    display: flex;
+    margin-bottom: 15px;
+}
+.icones_vantagens{
+    background-color: rgb(255, 215, 40);
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .reseva {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.info {
+    width: 50%;
+}
+
+.info h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+
+}
+
+.info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.image {
+    width: 45%;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.image .caption {
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* fim */
+
+
+
+/* inicio */
+
+
+.search-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.search-section img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.info-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.info-icons div {
+    width: 30%;
+}
+
+.info-icons h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+/* fim */
+
+
+
+
+/* inicio */
+
+#galeri-imag {
+    margin: 7rem;
+    margin-left: 10rem;
+    width: 8 0%;
+    
+}
+
+#img-m {
+    height: 25rem;
+    background-color: #ffffffa2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    
+}
+
+#text {
+    margin-left: 1rem;
+}
+
+#img-chapeu {
+    background-image: url(imagens/destino5.png);
+    background-size: cover;
+    background-position: center;
+    width: 60rem;
+    height: 15rem;
+    border-radius: 1rem;
+    margin-top: -6rem;
+    z-index: 10;
+    background: linear-gradient(rgba(0, 0, 0, 0.5)), rgba(0, 0, 0, 0.3);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#img-chapeu h3 {
+    margin-left: 20px;
+
+
+}
+
+#img-chapeu p {
+    margin-left: 20px;
+    margin-top: 15px;
+
+
+}
+/* fim */
+
+
+
+
+
+/* inicio */
+
+.testimonials-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.testimonial {
+    width: 30%;
+    text-align: center;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* fim */
+
+
+/* inicio */
+
+#final1{
+justify-content: center;
+text-align: center;
+align-items: center;
+color: #0a0808;
+}
+#final1 h1{
+    font-size: 90%;
+   color: #000000;
+}
+/* fim */
