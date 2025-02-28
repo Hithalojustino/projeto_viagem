@@ -21,9 +21,9 @@
             <h1>Viaje pelo mundo <span>aproveite os melhores destinos</span></h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             <div style="display: flex; align-items:center ;">
-                <button href="#" class="btn">Cadastrar-se</button>
+                <button href="#" class="btn" onclick="conectarPagina()">Cadastrar-se</button>
                 <i class="fi fi-sr-play icone"></i>
-                <a href="#" class="link">   Veja como funciona</a>
+                <a href="cadastroviagem.html" class="link">   Veja como funciona</a>
             </div>
         </div>
 
@@ -193,4 +193,9 @@
 
     </div><!-- fim -->
 </body>
+<script>
+    function conectarPagina() {
+      window.location.href = "tela2.html"; // Redireciona para a página tela2.html
+    }
+  </script>
 </html>

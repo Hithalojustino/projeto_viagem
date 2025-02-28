@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Viagens</title>
+    <style>
+        /* CSS para a página de listagem de viagens */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            padding-top: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f1f1f1;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Viagens Cadastradas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destino</th>
+                    <th>Data de Partida</th>
+                    <th>Data de Chegada</th>
+                    <th>Descrição</th>
+                    <th>Custo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Conexão com o banco de dados
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "bd_viagem";
+
+                // Criando a conexão
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Verificando a conexão
+                if ($conn->connect_error) {
+                    die("Falha na conexão: " . $conn->connect_error);
+                }
+
+                // Consulta para pegar as viagens
+                $sql = "SELECT * FROM viagens";
+                $result = $conn->query($sql);
+
+                // Verificando se há resultados e exibindo-os
+                if ($result->num_rows > 0) {
+                    // Exibindo cada viagem
+                    while($row = $result->fetch_assoc()) {
+                        // Formatar as datas para o formato brasileiro
+                        $data_partida = date('d/m/Y', strtotime($row["data_partida"]));
+                        $data_chegada = date('d/m/Y', strtotime($row["data_chegada"]));
+
+                        // Exibindo os dados da viagem
+                        echo "<tr>
+                                <td>" . htmlspecialchars($row["destino"]) . "</td>
+                                <td>" . $data_partida . "</td>
+                                <td>" . $data_chegada . "</td>
+                                <td>" . htmlspecialchars($row["descricao"]) . "</td>
+                                <td>R$ " . number_format($row["custo"], 2, ',', '.') . "</td>
+                              </tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='5'>Nenhuma viagem cadastrada.</td></tr>";
+                }
+
+                // Fechando a conexão
+                $conn->close();
+                ?>
+            </tbody>
+        </table>
+        <p><a href="cadastroviagem.html">Cadastrar nova viagem</a></p>
+    </div>
+</body>
+</html>
